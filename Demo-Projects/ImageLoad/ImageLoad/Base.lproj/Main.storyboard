@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11129.15" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11103.10"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ImageLoad" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RKc-1s-nH9">
+                                <color key="backgroundColor" red="0.103073212" green="1" blue="0.298427147" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="RKc-1s-nH9" secondAttribute="height" multiplier="236:231" id="VS3-zs-0jx"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="juD-RN-p9E">
+                                <state key="normal" title="Load"/>
+                                <connections>
+                                    <action selector="loadHinh:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F6h-Ji-XUD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uQL-Ux-rFv">
+                                <state key="normal" title="Demo"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="RKc-1s-nH9" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="0Ys-5R-B8a"/>
+                            <constraint firstItem="RKc-1s-nH9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="40" id="2Mb-we-1Aw"/>
+                            <constraint firstItem="uQL-Ux-rFv" firstAttribute="height" secondItem="juD-RN-p9E" secondAttribute="height" id="63f-sA-9xC"/>
+                            <constraint firstItem="uQL-Ux-rFv" firstAttribute="centerX" secondItem="juD-RN-p9E" secondAttribute="centerX" id="HvI-m6-fuD"/>
+                            <constraint firstItem="RKc-1s-nH9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qqz-u6-n8T"/>
+                            <constraint firstItem="uQL-Ux-rFv" firstAttribute="top" secondItem="juD-RN-p9E" secondAttribute="bottom" constant="30" id="TCp-Eh-YL0"/>
+                            <constraint firstItem="juD-RN-p9E" firstAttribute="centerX" secondItem="RKc-1s-nH9" secondAttribute="centerX" id="aRg-Va-OMn"/>
+                            <constraint firstItem="juD-RN-p9E" firstAttribute="top" secondItem="RKc-1s-nH9" secondAttribute="bottom" constant="40" id="kG5-dP-mpU"/>
+                            <constraint firstItem="uQL-Ux-rFv" firstAttribute="width" secondItem="juD-RN-p9E" secondAttribute="width" id="uiO-40-zWe"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imgHinh" destination="RKc-1s-nH9" id="awX-mO-Gmc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-79.200000000000003" y="137.18140929535232"/>
+        </scene>
+    </scenes>
+</document>

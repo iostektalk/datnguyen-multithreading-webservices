@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11129.15" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11103.10"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="final" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="308" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wiD-UB-ZBm">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="chim" rowHeight="308" id="8dw-XB-I30" customClass="chimTableViewCell" customModule="final" customModuleProvider="target">
+                                        <frame key="frameInset" minY="28" width="375" height="308"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8dw-XB-I30" id="4w0-Rj-YHv">
+                                            <frame key="frameInset" width="375" height="307"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="d5h-ZY-1aa">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="200" id="0FA-Mt-FaO"/>
+                                                        <constraint firstAttribute="height" constant="200" id="wio-00-e9q"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l6r-Sp-UzU">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="200" id="3Uc-2E-nco"/>
+                                                        <constraint firstAttribute="height" constant="40" id="DsT-Tc-vab"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="VDj-4Y-l7G">
+                                                    <color key="color" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </activityIndicatorView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="d5h-ZY-1aa" firstAttribute="centerY" secondItem="4w0-Rj-YHv" secondAttribute="centerY" id="CCt-Sy-aZ7"/>
+                                                <constraint firstItem="VDj-4Y-l7G" firstAttribute="centerX" secondItem="d5h-ZY-1aa" secondAttribute="centerX" id="FTx-UV-00A"/>
+                                                <constraint firstItem="d5h-ZY-1aa" firstAttribute="centerX" secondItem="4w0-Rj-YHv" secondAttribute="centerX" id="Xfc-wj-GZQ"/>
+                                                <constraint firstItem="l6r-Sp-UzU" firstAttribute="top" secondItem="4w0-Rj-YHv" secondAttribute="top" constant="20" id="ZN9-ZG-wh3"/>
+                                                <constraint firstItem="l6r-Sp-UzU" firstAttribute="leading" secondItem="4w0-Rj-YHv" secondAttribute="leading" constant="20" id="adh-qB-drS"/>
+                                                <constraint firstItem="VDj-4Y-l7G" firstAttribute="centerY" secondItem="d5h-ZY-1aa" secondAttribute="centerY" id="nug-7S-cnl"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="actWaiting" destination="VDj-4Y-l7G" id="vUC-9I-WKB"/>
+                                            <outlet property="imgHinh" destination="d5h-ZY-1aa" id="XHC-Sd-kf8"/>
+                                            <outlet property="lblTen" destination="l6r-Sp-UzU" id="aS8-FH-uFK"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="wiD-UB-ZBm" secondAttribute="trailing" id="Og9-nZ-OIG"/>
+                            <constraint firstItem="wiD-UB-ZBm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="UO1-2p-Jcb"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="wiD-UB-ZBm" secondAttribute="bottom" id="Z8e-CC-hZw"/>
+                            <constraint firstItem="wiD-UB-ZBm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="asz-I3-bqm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tblViewChim" destination="wiD-UB-ZBm" id="hah-4i-j7O"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="37.331334332833585"/>
+        </scene>
+    </scenes>
+</document>

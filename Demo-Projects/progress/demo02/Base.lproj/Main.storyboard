@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11129.15" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11103.10"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="demo02" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Download" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TZD-CW-4i3">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="HO9-yQ-1aj"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hTa-vc-dkL">
+                                <state key="normal" title="Download"/>
+                                <connections>
+                                    <action selector="downloadButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="ELk-9B-tPd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="hTa-vc-dkL" firstAttribute="top" secondItem="HO9-yQ-1aj" secondAttribute="bottom" constant="40" id="EkP-VN-fdD"/>
+                            <constraint firstItem="TZD-CW-4i3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="30" id="Msw-5n-ssy"/>
+                            <constraint firstItem="HO9-yQ-1aj" firstAttribute="width" secondItem="TZD-CW-4i3" secondAttribute="width" id="TYh-b5-HPe"/>
+                            <constraint firstItem="HO9-yQ-1aj" firstAttribute="top" secondItem="TZD-CW-4i3" secondAttribute="bottom" constant="50" id="ZtE-WB-Ud2"/>
+                            <constraint firstItem="HO9-yQ-1aj" firstAttribute="centerX" secondItem="TZD-CW-4i3" secondAttribute="centerX" id="goD-P5-sjN"/>
+                            <constraint firstItem="TZD-CW-4i3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="80" id="j4a-nE-MhK"/>
+                            <constraint firstAttribute="trailing" secondItem="TZD-CW-4i3" secondAttribute="trailing" constant="30" id="onq-OY-1Fx"/>
+                            <constraint firstItem="hTa-vc-dkL" firstAttribute="centerX" secondItem="HO9-yQ-1aj" secondAttribute="centerX" id="uqz-cd-gFA"/>
+                            <constraint firstItem="HO9-yQ-1aj" firstAttribute="height" secondItem="TZD-CW-4i3" secondAttribute="height" id="wCA-YI-Jq2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="sldProgress" destination="HO9-yQ-1aj" id="jlY-vu-syQ"/>
+                        <outlet property="statusLabel" destination="TZD-CW-4i3" id="WmH-ff-bNx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="137.18140929535232"/>
+        </scene>
+    </scenes>
+</document>
